@@ -1,21 +1,25 @@
 body {
-  background-color: #777777;
-  text-align: center;
-  font: "Arial"
+  background-color: green;
 }
-#body {
-  text-align: center;
-  background-color: white;
-  border-radius: 5px;
+#bottom {
+  font-family: "Arial";
+  background-color: purple;
+  color: white;
+  height: 15%;
+}
+#text {
+  font-size: 1.5em;
+  color: purple;
   font-family: "Arial";
 }
-#content {
-  border-radius: 7px;
-  font-family: "Comis Sans MS";
-  background-color: black;
-  color: white;
+#button {
+  background-color: green;
+  color: purple;
+  border-color: purple;
 }
 #copyright {
-  text-align: left;
+  font-family: "Arial";
+  text-align: right;
   font-size: 0.7em;
+  color: purple;
 }
