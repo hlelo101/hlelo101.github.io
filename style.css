@@ -1,0 +1,21 @@
+body {
+  background-color: #777777;
+  text-align: center;
+  font: "Arial"
+}
+#body {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Arial";
+}
+#content {
+  border-radius: 7px;
+  font-family: "Comis Sans MS";
+  background-color: black;
+  color: white;
+}
+#copyright {
+  text-align: left;
+  font-size: 0.7em;
+}
