@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-image: url('files/background.png'); */
+    background-size: cover; 
+}
+.align {
+    display: flex;
+    align-items: center;
+}
+.button {
+    text-decoration: none;
+    background-color: rgb(165, 44, 0);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+}
+b {
+    margin-top: 10px;
+}
+input {
+    background-color: rgb(105, 28, 0);
+    border-radius: 5px;
+    color: white;
+    border-style: none;
+}
+a {
+    text-decoration: none;
+    background-color: rgb(211, 56, 0);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+a:hover {
+    background-color: rgb(105, 28, 0);
+}
+.button:hover {
+    background-color: rgb(77, 20, 0);
+}
+#toolBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    width: 100px;
+    background: rgb(211,56,0);
+    background: linear-gradient(180deg, rgba(211,56,0,1) 0%, rgba(162,43,0,1) 100%); 
+    color: white;
+}
+#downloadPageRedirect {
+    height: 30px;
+    width: 300px;
+}
+#redirectTo {
+    position: absolute;
+    right: 120px;
+    top: 150px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: rgb(211, 56, 0);
+    color: white;
+}
+#redirectToInput {
+    width: 180px;
+    height: 20px;
+    margin-right: 10px;
+}
+#redirectButton {
+    margin-top: 9px;
+}
