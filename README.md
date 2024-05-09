@@ -6,3 +6,5 @@ The things are:
 - A text (amazing feature)
 - Redirection
 - Alert
+
+Not the most useful website, but at least it works
