@@ -6,5 +6,6 @@ The things are:
 - A text (amazing feature)
 - Redirection
 - Alert
+- Exit button
 
 Not the most useful website, but at least it works

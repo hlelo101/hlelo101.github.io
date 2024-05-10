@@ -77,6 +77,15 @@ a:hover {
     background-color: rgb(211, 56, 0);
     color: white;
 }
+#exitConfirm {
+    position: absolute;
+    right: 120px;
+    top: 260px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: rgb(211, 56, 0);
+    color: white;
+}
 #redirectToInput {
     width: 180px;
     height: 20px;
