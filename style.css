@@ -3,6 +3,8 @@ body {
     background-image: url('files/background.jpg');
     background-size: cover;
     color: white;
+    height: 100%;
+    text-shadow: 0px 0px 10px black;
 }
 .align {
     display: flex;
@@ -10,7 +12,8 @@ body {
 }
 .button {
     text-decoration: none;
-    background-color: rgb(165, 44, 0);
+    background-color: rgba(165, 44, 0, 0.6);
+    backdrop-filter: blur(4px);
     color: white;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -19,11 +22,15 @@ body {
     justify-content: center;
     text-align: center;
     cursor: pointer;
+    text-shadow: none;
     transition: all 0.3s ease;
 }
 .icon {
     width: 50px;
     height: 50px;
+}
+.bold {
+    font-weight: bold;
 }
 b {
     margin-top: 10px;
@@ -36,32 +43,51 @@ input {
 }
 a {
     text-decoration: none;
-    background-color: rgb(211, 56, 0);
+    background-color: rgba(211, 56, 0, 0.6);
+    backdrop-filter: blur(4px);
     color: white;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    text-shadow: none;
     margin-left: 10px;
 }
 a:hover {
-    background-color: rgb(105, 28, 0);
+    background-color: rgba(105, 28, 0, 0.6);
+    backdrop-filter: blur(4px);
 }
 .button:hover {
-    background-color: rgb(77, 20, 0);
+    background-color: rgba(77, 20, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+.reposButtons {
+    height: 30px;
+    width: 280px;
+}
+.separation {
+    background-color: white;
+    margin: 30px;
+    margin-left: 0;
+    height: 5px;
+    width: 140px;
+    border-radius: 5px;
 }
 #toolBar {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 0%;
-    right: 0%;
+    position: fixed;
+    z-index:100;
+    top: 0;
+    right: 0;
     height: 100%;
     width: 100px;
+    align-items: center;
     background: rgb(211,56,0);
-    background: linear-gradient(180deg, rgba(211,56,0,1) 0%, rgba(162,43,0,1) 100%); 
+    background: linear-gradient(180deg, rgba(211,56,0,0.6) 0%, rgba(113, 30, 0, 0.6) 100%);
+    backdrop-filter: blur(4px);
+    text-shadow: none;
     color: white;
 }
 #downloadPageRedirect {
@@ -69,21 +95,25 @@ a:hover {
     width: 300px;
 }
 #redirectTo {
-    position: absolute;
+    position: fixed;
+    text-shadow: none;
     right: 120px;
     top: 150px;
     width: 250px;
     border-radius: 10px;
-    background-color: rgb(211, 56, 0);
+    background-color: rgba(211, 56, 0, 0.7);
+    backdrop-filter: blur(4px);
     color: white;
 }
 #exitConfirm {
-    position: absolute;
+    position: fixed;
+    text-shadow: none;
     right: 120px;
     top: 260px;
     width: 250px;
     border-radius: 10px;
-    background-color: rgb(211, 56, 0);
+    background-color: rgba(211, 56, 0, 0.7);
+    backdrop-filter: blur(4px);
     color: white;
 }
 #redirectToInput {
