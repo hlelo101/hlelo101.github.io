@@ -7,5 +7,6 @@ The things are:
 - Redirection
 - Alert
 - Exit button
+- Links
 
 Not the most useful website, but at least it works
