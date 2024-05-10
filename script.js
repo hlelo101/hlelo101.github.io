@@ -9,6 +9,8 @@ var redirectButton = document.getElementById('redirectButton');
 var closeWebsite = document.getElementById('closeWebsite');
 var exitConfirmWindow = document.getElementById('exitConfirm');
 var exitNo = document.getElementById('exitNo');
+//GithubRedirect
+var githubRedirect = document.getElementById('githubRedirect');
 // Hide by default
 redirectTo.style.display = 'none';
 exitConfirmWindow.style.display = 'none';
@@ -44,4 +46,8 @@ exitNo.addEventListener('click', function() {
 });
 exitYes.addEventListener('click', function() {
     window.close();
+});
+//GithubRedirect
+githubRedirect.addEventListener('click', function() {
+    window.location.href = 'https://github.com/hlelo101';
 });
