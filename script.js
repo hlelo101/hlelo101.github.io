@@ -11,9 +11,13 @@ var exitConfirmWindow = document.getElementById('exitConfirm');
 var exitNo = document.getElementById('exitNo');
 //GithubRedirect
 var githubRedirect = document.getElementById('githubRedirect');
+// System info
+var sysInfo = document.getElementById('sysInfo');
+var sysInfoButton = document.getElementById('sysInfoButton');
 // Hide by default
 redirectTo.style.display = 'none';
 exitConfirmWindow.style.display = 'none';
+sysInfo.style.display = 'none';
 // Alert
 alertButton.addEventListener('click', function() {
     alert('This is an alert');
@@ -53,25 +57,21 @@ githubRedirect.addEventListener('click', function() {
 });
 // Get system info
 function getSystemInfo() {
-    var ram = document.getElementById('RAM');
-    var cpu = document.getElementById('CPU');
     var os = document.getElementById('OS');
-    var browser = document.getElementById('Browser');
-    var screen = document.getElementById('Screen');
-
-    var system = {
-        ram: navigator.device.memory && navigator.device.memory.total ? Math.round(navigator.device.memory.total / 1024 / 1024 * 100) / 100 + ' Go' : 'Unknown',
-        cpu: navigator.cpu ? navigator.cpu.brand : 'Unknown',
-        os: navigator.appVersion ? navigator.appVersion.split(' ')[0] : 'Unknown',
-        browser: navigator.appName ? navigator.appName : 'Unknown',
-        screen: screen ? screen.width + 'x' + screen.height : 'Unknown'
-    }
-
-    ram.innerHTML = 'RAM: ' + system.ram;
-    cpu.innerHTML = 'CPU: ' + system.cpu;
-    os.innerHTML = 'OS: ' + system.os;
-    browser.innerHTML = 'Browser: ' + system.browser;
-    screen.innerHTML = 'Screen: ' + system.screen;
+    var browser = document.getElementById('browser');
+    var screen = document.getElementById('screen');
+    os.innerHTML = navigator.userAgent.match(/(Windows|Macintosh|Linux)/) ? navigator.userAgent.match(/(Windows|Macintosh|Linux)/)[0] : 'Unknown';
+    browser.innerHTML = navigator.userAgent.match(/(Apple.*Safari|Chrome|Fire.*Fox|Opera|Trident.*rv)/) ? navigator.userAgent.match(/(Apple.*Safari|Chrome|Fire.*Fox|Opera|Trident.*rv)/)[0] : 'Unknown';
 }
 
-getSystemInfo();
+document.addEventListener('DOMContentLoaded', function() {
+    getSystemInfo();
+});
+
+sysInfoButton.addEventListener('click', function() {
+    if (sysInfo.style.display === 'none') {
+        sysInfo.style.display = 'block';
+    } else {
+        sysInfo.style.display = 'none';
+    }
+});
