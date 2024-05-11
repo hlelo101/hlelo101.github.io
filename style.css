@@ -139,3 +139,9 @@ a:hover {
 #sysInfoButton {
     width: 80px;
 }
+#leftDiv {
+    position: absolute;
+    text-align: right;
+    right: 120px;
+    top: 10px;
+}
