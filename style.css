@@ -89,6 +89,7 @@ a:hover {
     backdrop-filter: blur(4px);
     text-shadow: none;
     color: white;
+    overflow-y: auto;
 }
 #downloadPageRedirect {
     height: 30px;
