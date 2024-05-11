@@ -8,5 +8,6 @@ The things are:
 - Alert
 - Exit button
 - Links
+- System info
 
 Not the most useful website, but at least it works
