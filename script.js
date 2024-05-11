@@ -51,3 +51,27 @@ exitYes.addEventListener('click', function() {
 githubRedirect.addEventListener('click', function() {
     window.location.href = 'https://github.com/hlelo101';
 });
+// Get system info
+function getSystemInfo() {
+    var ram = document.getElementById('RAM');
+    var cpu = document.getElementById('CPU');
+    var os = document.getElementById('OS');
+    var browser = document.getElementById('Browser');
+    var screen = document.getElementById('Screen');
+
+    var system = {
+        ram: navigator.device.memory && navigator.device.memory.total ? Math.round(navigator.device.memory.total / 1024 / 1024 * 100) / 100 + ' Go' : 'Unknown',
+        cpu: navigator.cpu ? navigator.cpu.brand : 'Unknown',
+        os: navigator.appVersion ? navigator.appVersion.split(' ')[0] : 'Unknown',
+        browser: navigator.appName ? navigator.appName : 'Unknown',
+        screen: screen ? screen.width + 'x' + screen.height : 'Unknown'
+    }
+
+    ram.innerHTML = 'RAM: ' + system.ram;
+    cpu.innerHTML = 'CPU: ' + system.cpu;
+    os.innerHTML = 'OS: ' + system.os;
+    browser.innerHTML = 'Browser: ' + system.browser;
+    screen.innerHTML = 'Screen: ' + system.screen;
+}
+
+getSystemInfo();
