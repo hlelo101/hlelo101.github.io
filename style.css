@@ -116,6 +116,17 @@ a:hover {
     backdrop-filter: blur(4px);
     color: white;
 }
+#sysInfo {
+    position: fixed;
+    text-shadow: none;
+    right: 120px;
+    top: 370px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: rgba(211, 56, 0, 0.7);
+    backdrop-filter: blur(4px);
+    color: white;
+}
 #redirectToInput {
     width: 180px;
     height: 20px;
@@ -123,4 +134,7 @@ a:hover {
 }
 #redirectButton {
     margin-top: 9px;
+}
+#sysInfoButton {
+    width: 80px;
 }
