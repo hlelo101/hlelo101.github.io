@@ -59,9 +59,38 @@ githubRedirect.addEventListener('click', function() {
 function getSystemInfo() {
     var os = document.getElementById('OS');
     var browser = document.getElementById('browser');
-    var screen = document.getElementById('screen');
     os.innerHTML = navigator.userAgent.match(/(Windows|Macintosh|Linux)/) ? navigator.userAgent.match(/(Windows|Macintosh|Linux)/)[0] : 'Unknown';
-    browser.innerHTML = navigator.userAgent.match(/(Apple.*Safari|Chrome|Fire.*Fox|Opera|Trident.*rv)/) ? navigator.userAgent.match(/(Apple.*Safari|Chrome|Fire.*Fox|Opera|Trident.*rv)/)[0] : 'Unknown';
+    // Opera 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    // Firefox 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    // Safari 3.0+ "[object HTMLElementConstructor]" 
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+    // Internet Explorer 6-11
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    // Edge 20+
+    var isEdge = !isIE && !!window.StyleMedia;
+    // Chrome 1 - 79
+    var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+    // Edge (based on chromium) detection
+    var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+    // Blink engine detection
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
+    if(isFirefox) {
+        browser.innerHTML = 'Firefox';
+    } else if(isChrome) {
+        browser.innerHTML = 'Chrome';
+    } else if(isSafari) {
+        browser.innerHTML = 'Safari';
+    } else if(isIE) {
+        browser.innerHTML = 'Internet Explorer';
+    } else if(isEdge) {
+        browser.innerHTML = 'Microsoft Edge';
+    } else if(isEdgeChromium) {
+        browser.innerHTML = 'Microsoft Edge Chromium';
+    } else if(isBlink) {
+        browser.innerHTML = 'Blink';
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
