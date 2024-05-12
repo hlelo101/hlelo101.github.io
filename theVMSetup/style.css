@@ -44,7 +44,7 @@ a:hover {
     background-color: rgba(211,56,0, 0.6);
     backdrop-filter: blur(4px);
     border-radius: 20px;
-    overflow: hidden;
+    overflow: scroll;
 }
 #downloadButton {
     margin: 10px;
