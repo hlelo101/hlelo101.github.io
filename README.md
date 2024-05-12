@@ -9,5 +9,6 @@ The things are:
 - Exit button
 - Links
 - System info
+- The VM Setup
 
 Not the most useful website, but at least it works
