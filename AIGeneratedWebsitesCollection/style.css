@@ -1,0 +1,97 @@
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+    color: white;
+    background-image: url('files/background.jpg');
+    background-size: cover;
+}
+h1 {
+    font-size: 1.3em;
+    font-weight: none;
+}
+a {
+    background-color: none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 30px;
+    width: 230px;
+    text-decoration: none;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+a:hover {
+    background-color: rgba(237, 237, 237, 0.4);
+    color: black;
+}
+video {
+    border-radius: 5px;
+    height: 300px;
+}
+#video {
+    position: absolute;
+    bottom: 75px;
+    right: 450px;
+    text-align: right;
+}
+.title {
+    font-size: 1.2em;
+}
+.websitePage {
+    margin-left: 200px;
+}
+#websites {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#mainBox {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    overflow: scroll;
+}
+#screenshot {
+    position: absolute;
+    text-align: right;
+    color: green;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+}
+#comment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 150px;
+    width: 250px;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+}
+#mainPage {
+    position: absolute;
+    top: 20px;
+    right: 280px;
+    width: 170px;
+}
+.searchEngine {
+    margin-top: 50px;
+}
+.third {
+    margin-top: 100px;
+}
+.fourth {
+    margin-top: 150px;
+}
