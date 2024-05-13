@@ -1,0 +1,8 @@
+// script.js
+// Example: Toggle navigation menu on mobile devices
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('nav ul');
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+});
