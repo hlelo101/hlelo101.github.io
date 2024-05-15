@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>This was written in a school on a school computer</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="topBar">
+            <p style="margin-left: 10px; color: white; font-weight: bold;">This is the topbar</p>
+            <a href="../index.html" style="margin-left: 160px;">Go back to the main page (why are you even here?)</a>
+        </div>
+        <div id="mainContent">
+            <h1>School computor</h1>
+            <p>This was made on a school computer in a school</p>
+            <p class="zmall">I don't know why you would want to know that, but here we are</p>
+            <p>Here is some (AI generated, probably) pictures that I found on the computer:</p>
+            <img src="images/pigeonWar.jpg" type="image/jpg" height="380">
+            <img src="images/iguana.jpg" type="image/jpg" height="380">
+            <img src="images/iguanaFoxChess.jpg" type="image/jpg" height="380">
+            <p>I also found this code:</p>
+            <hr>
+            <p>@echo off
+
+                rem Déclaration des variables
+                set /A a=0
+                set /A b=0
+                set /A c=0
+                set /A choix=0
+                
+                rem Affichage du menu
+                echo.
+                echo 1. Addition
+                echo 2. Soustraction
+                echo 3. Multiplication
+                echo 4. Division
+                echo 5. Quitter
+                
+                rem Saisie du choix de l'utilisateur
+                set /p choix=Choix :
+                
+                rem Traitement du choix de l'utilisateur
+                if /i "%choix%"=="1" (
+                  rem Addition
+                  echo.
+                  set /p a=Nombre 1 :
+                  set /p b=Nombre 2 :
+                  c=a+b
+                  echo.
+                  echo Le résultat est %c%
+                ) else if /i "%choix%"=="2" (
+                  rem Soustraction
+                  echo.
+                  set /p a=Nombre 1 :
+                  set /p b=Nombre 2 :
+                  c=a-b
+                  echo.
+                  echo Le résultat est %c%
+                ) else if /i "%choix%"=="3" (
+                  rem Multiplication
+                  echo.
+                  set /p a=Nombre 1 :
+                  set /p b=Nombre 2 :
+                  c=a*b
+                  echo.
+                  echo Le résultat est %c%
+                ) else if /i "%choix%"=="4" (
+                  rem Division
+                  echo.
+                  set /p a=Nombre 1 :
+                  set /p b=Nombre 2 :
+                  c=a/b
+                  echo.
+                  echo Le résultat est %c%
+                ) else if /i "%choix%"=="5" (
+                  rem Quitter
+                  echo.
+                  echo Au revoir !
+                ) else (
+                  echo.
+                  echo Choix invalide
+                )
+                
+                rem Pause pour afficher le résultat
+                pause
+                </p>
+                <p class="zmall">Good luck reading it tho (too lazy to add line breaks)</p>
+        </div>
+    </body>
+</html>
