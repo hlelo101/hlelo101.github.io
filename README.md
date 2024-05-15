@@ -10,5 +10,6 @@ The things are:
 - Links
 - System info
 - The VM Setup
+- Something written on a school computer in a school
 
 Not the most useful website, but at least it works
