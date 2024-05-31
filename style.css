@@ -5,6 +5,7 @@ body {
     color: white;
     height: 100%;
     text-shadow: 0px 0px 10px black;
+    background-attachment: fixed;
 }
 .align {
     display: flex;
