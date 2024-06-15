@@ -1,121 +1,56 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
     <head>
-        <title>Hlelo's website</title>
+        <title>AI Generated websites collection</title>
+        <link href="../files/icons/aiIcon64x64.png" rel="icon" type="image/png">
         <link href="style.css" rel="stylesheet">
-        <link rel="icon" href="files/icons/arrowsIcon64x64.png" type="image/png">
     </head>
     <body>
-        <p class="bold">Welcome to my website.</p>
-        <p>As you can see, it's a bit empty, but it's evolving (or at least it should be).</p>
-        <p>While you are here, why not looking at this download page that I made?</p>
-        <a href="downloadPage/index.html" id="downloadPageRedirect">Look at the download page that I made</a>
-        <div class="separation"></div>
-        <p class="bold">Also, here is some things that I made:</p>
-        <p>Mini Google App:</p>
-        <a href="https://github.com/hlelo101/Mini-Google-App" class="reposButtons">Mini Google App (GitHub)</a>
-        <p>Random small apps:</p>
-        <a href="https://github.com/hlelo101/Random-small-apps" class="reposButtons">Random Small Apps (GitHub)</a>
-        <p>WYW (What You Wrote):</p>
-        <a href="https://github.com/hlelo101/What-you-wrote" class="reposButtons">WYW (GitHub)</a>
-        <p>Simple online notepad:</p>
-        <a href="https://github.com/hlelo101/Simple-online-notepad" class="reposButtons" style="margin-bottom: 20px;">Simple Online Notepad (GitHub)</a>
-        <a href="https://hlelo101.github.io/Simple-online-notepad/" class="reposButtons">Simple Online Notepad (Website)</a>
-        <p>Simple timer:</p>
-        <a href="https://github.com/hlelo101/Simple-timer" class="reposButtons" style="margin-bottom: 20px;">Simple Timer (GitHub)</a>
-        <p>Ready:</p>
-        <a href="https://github.com/hlelo101/Ready" class="reposButtons" style="margin-bottom: 20px;">Ready (GitHub)</a>
-        <a href="https://hlelo101.github.io/Ready/" class="reposButtons">Ready (Website)</a>
-        <p>Kodemorfi:</p>
-        <a href="https://github.com/hlelo101/Kodemorfi/" class="reposButtons" style="margin-bottom: 20px;">Kodemorfi (GitHub)</a>
-        <div class="separation"></div>
-        <p>You can see this website's souce code here (it's on GitHub):</p>
-        <a href="https://github.com/hlelo101/hlelo101.github.io" class="reposButtons">This website's source code</a>
-        <div class="separation"></div>
-        <div class="align">
-            <p style="margin-right: 10px;">My github profile: </p>
-            <div class="button">
-                <div style="margin: 5px;" id="githubRedirect">
-                    <img src="files/icons/githubIcon180x180.png" height="60" width="60">
-                </div>
-            </div>
-        </div>
-        <p style="font-size: 0.6em; margin-left: 5px; margin-top: 0;">(what do you think of that icon?)</p>
-        <!-- Toolbar -->
-        <div id="toolBar">
-            <b style="margin-bottom: 10px;">ToolBar</b>
-            <div class="button" id="alertButton">
-                <div style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
-                    <img src="files/icons/alertIcon180x180.png" class="icon">
-                    <p style="margin-bottom: 0px;">Alert</p>
-                </div>
-            </div>
-            <div class="button" id="usefulWebsite">
-                <div style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
-                    <img src="files/icons/redirectIcon180x180.png" class="icon">
-                    <p style="margin-bottom: 0px;">Redirect</p>
-                </div>
-            </div>
-            <div class="button" id="closeWebsite">
-                <div style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
-                    <img src="files/icons/exitIcon180x180.png" class="icon">
-                    <p style="margin-bottom: 0px;">Exit</p>
-                </div>
-            </div>
-            <div class="button" id="sysInfoButton">
-                <div style="margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;">
-                    <img src="files/icons/systemInfoIcon180x180.png" class="icon">
-                    <p style="margin-bottom: 0px;">System info</p>
-                </div>
-            </div>
-        </div>
-        <!-- Elements on the left -->
-        <div id="leftDiv">
-            <p>Here is something else: <b>The VM setup</b></p>
-            <a href="theVMSetup/index.html" class="reposButtons">Got to the VM setup page</a>
-            <p>And the <b>AI generated websites collection:</b></p>
-            <a href="AIGeneratedWebsitesCollection/index.html" class="reposButtons">Go to the AI webpages collection</a>
-            <p>Something written in school:</p>
-            <a href="Written in school/index.html" class="reposButtons">Go to written in school</a>
-        </div>
-        <!-- Boxes or whatever you call them -->
-        <div id="redirectTo">
-            <div style="margin: 10px;">
-                <p style="margin-bottom: 0px;">Redirect to:</p>
-                <div class="align">
-                    <input type="text" id="redirectToInput">
-                    <div class="button" id="redirectButton">
-                        <p style="margin: 5px">Go</p>
+        <div id="mainBox">
+            <div style="margin: 20px;">
+                <h1>AI Generated websites collection</h1>
+                <div id="websites">
+                    <div>
+                        <p class="title">Copilot:</p>
+                        <a href="files/websites/copilot/homepage/index.html">Copilot's home page</a>
+                        <a href="files/websites/copilot/searchEngine/index.html" class="searchEngine">Copilot's search engine</a>
+                        <a href="files/websites/copilot/blog/index.html" class="third">Copilot's blog</a>
+                        <a href="files/websites/copilot/forum/index.html" class="fourth">Copilot's Community Forum</a>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div id="exitConfirm">
-            <div style="margin: 10px;">
-                <p>Are you sure you want to exit?</p>
-                <div class="align">
-                    <div class="button" style="margin-right: 10px;">
-                        <p id="exitYes" style="margin: 5px;">Yes</p>
+                    <div class="websitePage">
+                        <p class="title">ChatGPT:</p>
+                        <a href="files/websites/chatgpt/homepage/index.html">ChatGPT's home page</a>
+                        <a href="files/websites/chatgpt/searchEngine/index.html" class="searchEngine">ChatGPT's search engine</a>
+                        <a href="files/websites/chatgpt/funZone/index.html" class="third">ChatGPT's fun zone</a>
+                        <a href="files/websites/chatgpt/knowledgeHub/index.html" class="fourth">ChatGPT's knowledge hub</a>
                     </div>
-                    <div class="button">
-                        <p id="exitNo" style="margin: 5px;">No</p>
+                    <div class="websitePage">
+                        <p class="title">Gemini:</p>
+                        <a href="files/websites/gemini/homepage/index.html">Gemini's home page</a>
+                        <a href="files/websites/gemini/searchEngine/index.html" class="searchEngine">Gemini's search engine</a>
+                        <a href="files/websites/gemini/blog/index.html" class="third">Gemini's blog</a>
+                        <a href="files/websites/gemini/marketplace/index.html" class="fourth">Gemini's marketplace</a>
                     </div>
+                    <div id="screenshot">
+                        <img src="files/chatgptScreenshot.png" height="440" style="border-radius: 5px;">
+                        <p>// I mean, it's what he told me... mostly</p>
+                    </div>
+                    <div id="comment">
+                        <div style="margin: 10px;">
+                            <p style="font-weight: bold;">Comment:</p>
+                            <p>You might see comments like this one in some of the websites. These notes weren't made by AI, I made them in order to give additional info.</p>
+                        </div>
+                    </div>
+                    <div id="video">
+                        <p>Walkthrough:</p>
+                        <video controls>
+                            <source src="files/AIGeneratedWebsitedGallery.mp4" type="video/mp4">
+                            Your browser doesn't seems to support the video tag
+                        </video>
+                    </div>
+                    <a href="../index.html" id="mainPage">Go to the main page</a>
                 </div>
             </div>
         </div>
-        <div id="sysInfo">
-            <div style="margin: 10px;">
-                <b>System info:</b>
-                <div class="align">
-                    <p style="margin-bottom: 0;">OS: </p>
-                    <p id="OS" style="margin-bottom: 0;">undefinied</p>
-                </div>
-                <div class="align">
-                    <p style="margin-bottom: 0;">Browser: </p>
-                    <p id="browser" style="margin-bottom: 0;">undefinied</p>
-                </div>
-            </div>
-        </div>
-        <script src="script.js"></script>
     </body>
 </html>
