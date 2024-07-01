@@ -40,6 +40,12 @@ window.onload = setInitialScale;
 redirectTo.style.display = 'none';
 exitConfirmWindow.style.display = 'none';
 sysInfo.style.display = 'none';
+// Hide all boxes
+function hideAllBoxes() {
+    redirectTo.style.display = 'none';
+    exitConfirmWindow.style.display = 'none';
+    sysInfo.style.display = 'none';
+}
 // Alert
 alertButton.addEventListener('click', function() {
     alert('This is an alert');
@@ -47,6 +53,7 @@ alertButton.addEventListener('click', function() {
 // Redirect
 redirectToButton.addEventListener('click', function() {
     if (redirectTo.style.display === 'none') {
+        hideAllBoxes();
         redirectTo.style.display = 'block';
     } else {
         redirectTo.style.display = 'none';
@@ -62,6 +69,7 @@ redirectButton.addEventListener('click', function() {
 // Exit
 closeWebsite.addEventListener('click', function() {
     if (exitConfirmWindow.style.display === 'none') {
+        hideAllBoxes();
         exitConfirmWindow.style.display = 'block';
     } else {
         exitConfirmWindow.style.display = 'none';
@@ -121,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 sysInfoButton.addEventListener('click', function() {
     if (sysInfo.style.display === 'none') {
+        hideAllBoxes();
         sysInfo.style.display = 'block';
     } else {
         sysInfo.style.display = 'none';

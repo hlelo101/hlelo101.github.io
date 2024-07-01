@@ -182,7 +182,6 @@
         transition: all 0.3s ease;
         margin-left: 10px;
         margin-right: 10px;
-        font-size: 0;
     }
     .icon {
         width: 50px;
@@ -234,6 +233,7 @@
         border-radius: 5px;
     }
     #toolBar {
+        font-size: 0em;
         display: flex;
         flex-direction: row;
         position: fixed;
@@ -251,22 +251,16 @@
         color: white;
         overflow-x: auto;
     }
-    #toolBarText {
-        position: absolute;
-        top: 3px;
-        left: 5px;
-        font-weight: normal;
-        font-size: 0.5em;
-    }
     #downloadPageRedirect {
         height: 30px;
         width: 300px;
     }
     #redirectTo {
+        font-size: 1em;
         position: fixed;
         text-shadow: none;
-        right: 120px;
-        top: 150px;
+        bottom: 110px;
+        left: 10px;
         width: 250px;
         border-radius: 10px;
         background-color: rgba(211, 56, 0, 0.7);
@@ -276,8 +270,8 @@
     #exitConfirm {
         position: fixed;
         text-shadow: none;
-        right: 120px;
-        top: 260px;
+        bottom: 110px;
+        left: 10px;
         width: 250px;
         border-radius: 10px;
         background-color: rgba(211, 56, 0, 0.7);
@@ -287,8 +281,8 @@
     #sysInfo {
         position: fixed;
         text-shadow: none;
-        right: 120px;
-        top: 370px;
+        bottom: 110px;
+        left: 10px;
         width: 250px;
         border-radius: 10px;
         background-color: rgba(211, 56, 0, 0.7);
