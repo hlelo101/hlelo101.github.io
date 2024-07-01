@@ -14,6 +14,28 @@ var githubRedirect = document.getElementById('githubRedirect');
 // System info
 var sysInfo = document.getElementById('sysInfo');
 var sysInfoButton = document.getElementById('sysInfoButton');
+// Set inintial scale
+function setInitialScale() {
+    // Reset the initial scale to 1
+    var existingMetaTag = document.querySelector('meta[name="viewport"]');
+    if (existingMetaTag) {
+        existingMetaTag.parentNode.removeChild(existingMetaTag);
+    }
+
+    var screenWidth = window.innerWidth;
+    var initialScale = 1.0; // Default scale
+
+    if (screenWidth < 1000) {
+        initialScale = 2; // Scale for small screens
+    }
+
+    var metaTag = document.createElement('meta');
+    metaTag.name = "viewport";
+    metaTag.content = "width=device-width, initial-scale=" + initialScale;
+    document.getElementsByTagName('head')[0].appendChild(metaTag);
+}
+
+window.onload = setInitialScale;
 // Hide by default
 redirectTo.style.display = 'none';
 exitConfirmWindow.style.display = 'none';
