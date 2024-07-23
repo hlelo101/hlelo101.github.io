@@ -14,6 +14,9 @@ var githubRedirect = document.getElementById('githubRedirect');
 // System info
 var sysInfo = document.getElementById('sysInfo');
 var sysInfoButton = document.getElementById('sysInfoButton');
+// Word of the day
+var wordOfTheDay = document.getElementById('wordOfTheDay');
+var wordOfTheDayButton = document.getElementById('wordOfTheDayButton');
 // Set inintial scale
 function setInitialScale() {
     // Reset the initial scale to 1
@@ -36,15 +39,22 @@ function setInitialScale() {
 }
 
 window.onload = setInitialScale;
+// Get Y position of an element
+function getYPosition(element) {
+    var rect = element.getBoundingClientRect();
+    return rect.top + window.scrollY;
+}
 // Hide by default
 redirectTo.style.display = 'none';
 exitConfirmWindow.style.display = 'none';
 sysInfo.style.display = 'none';
+wordOfTheDay.style.display = 'none';
 // Hide all boxes
 function hideAllBoxes() {
     redirectTo.style.display = 'none';
     exitConfirmWindow.style.display = 'none';
     sysInfo.style.display = 'none';
+    wordOfTheDay.style.display = 'none';
 }
 // Alert
 alertButton.addEventListener('click', function() {
@@ -54,6 +64,9 @@ alertButton.addEventListener('click', function() {
 redirectToButton.addEventListener('click', function() {
     if (redirectTo.style.display === 'none') {
         hideAllBoxes();
+        if(window.innerWidth > 1000) {
+            redirectTo.style.top = getYPosition(redirectToButton) + "px";
+        }
         redirectTo.style.display = 'block';
     } else {
         redirectTo.style.display = 'none';
@@ -70,6 +83,9 @@ redirectButton.addEventListener('click', function() {
 closeWebsite.addEventListener('click', function() {
     if (exitConfirmWindow.style.display === 'none') {
         hideAllBoxes();
+        if(window.innerWidth > 1000) {
+            exitConfirmWindow.style.top = getYPosition(closeWebsite) + "px";
+        }
         exitConfirmWindow.style.display = 'block';
     } else {
         exitConfirmWindow.style.display = 'none';
@@ -130,8 +146,41 @@ document.addEventListener('DOMContentLoaded', function() {
 sysInfoButton.addEventListener('click', function() {
     if (sysInfo.style.display === 'none') {
         hideAllBoxes();
+        if(window.innerWidth > 1000) {
+            sysInfo.style.top = getYPosition(sysInfoButton) + "px";
+        }
         sysInfo.style.display = 'block';
     } else {
         sysInfo.style.display = 'none';
+    }
+});
+// The world of the day
+const url = `https://api.github.com/repos/hlelo101/hlelo101.github.io/contents/wordOfTheDay.txt`;
+async function fetchFileContent() {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const decodedContent = atob(data.content);
+        const pTag = document.getElementById('wordOfTheDayShow');
+        pTag.textContent = decodedContent;
+        pTag.classList.add("animateText");
+    } catch (error) {
+        console.error('Error fetching file content:', error);
+    }
+}
+
+wordOfTheDayButton.addEventListener('click', function() {
+    if (wordOfTheDay.style.display === 'none') {
+        hideAllBoxes();
+        if(window.innerWidth > 1000) {
+            wordOfTheDay.style.top = getYPosition(wordOfTheDayButton) + "px";
+        }
+        fetchFileContent();
+        wordOfTheDay.style.display = 'block';
+    } else {
+        wordOfTheDay.style.display = 'none';
     }
 });
