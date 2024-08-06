@@ -99,7 +99,7 @@
         width: 300px;
     }
     #redirectTo {
-        position: fixed;
+        position: absolute;
         text-shadow: none;
         right: 120px;
         top: 150px;
@@ -110,7 +110,7 @@
         color: white;
     }
     #exitConfirm {
-        position: fixed;
+        position: absolute;
         text-shadow: none;
         right: 120px;
         top: 260px;
@@ -121,7 +121,7 @@
         color: white;
     }
     #sysInfo {
-        position: fixed;
+        position: absolute;
         text-shadow: none;
         right: 120px;
         top: 370px;
@@ -152,7 +152,7 @@
         width: 80px;
     }
     #wordOfTheDay {
-        position: fixed;
+        position: absolute;
         text-shadow: none;
         right: 120px;
         top: 496px;
