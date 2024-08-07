@@ -19,12 +19,6 @@ var wordOfTheDay = document.getElementById('wordOfTheDay');
 var wordOfTheDayButton = document.getElementById('wordOfTheDayButton');
 // Set inintial scale
 function setInitialScale() {
-    // Reset the initial scale to 1
-    var existingMetaTag = document.querySelector('meta[name="viewport"]');
-    if (existingMetaTag) {
-        existingMetaTag.parentNode.removeChild(existingMetaTag);
-    }
-
     var screenWidth = window.innerWidth;
     var initialScale = 1.0; // Default scale
 
